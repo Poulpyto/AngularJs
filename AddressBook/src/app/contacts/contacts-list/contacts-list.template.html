@@ -1,0 +1,10 @@
+<h2>liste des contacts</h2>
+<table class="table table-striped">
+    <tr ng-repeat="c in $ctrl.contacts">
+        <td>{{c.name}}</td>
+        <td>
+            <a class="btn btn-xs btn-primary" ui-sref="contacts-show({id: c.id})">Afficher</a>
+            <button class="btn btn-xs btn-danger" ng-click="$ctrl.remove($index)">Supprimer</button>
+        </td>
+    </tr>
+</table>

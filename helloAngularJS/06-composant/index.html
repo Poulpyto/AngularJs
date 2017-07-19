@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app.module">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body ng-controller="PrenomCtrl as $ctrl">
+<af-alert message="$ctrl.prenom"></af-alert>
+<div>
+    Prénoms : <input ng-model="$ctrl.prenom">
+    <button ng-click="$ctrl.addPrenom()"
+            ng-disabled="!$ctrl.prenom.length">+</button>
+</div>
+<p ng-repeat="prenom in $ctrl.prenoms track by $index">
+    {{$index}} - Bonjour <span ng-bind="prenom"></span> !
+    <button ng-click="$ctrl.delPrenom($index)">-</button>
+</p>
+<script src="../node_modules/angular/angular.js"></script>
+<script src="prenom.controller.js"></script>
+<script src="alert/alert.component.js"></script>
+<script src="app.module.js"></script>
+<script>
+  //module IIFE imediately invoked function expression
+  (function () {
+    'use strict';
+
+  }());
+</script>
+</body>
+</html>

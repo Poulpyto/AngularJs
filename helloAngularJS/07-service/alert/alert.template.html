@@ -1,0 +1,4 @@
+<div class ='alert alert-success' ng-repeat="message in $ctrl.messages track by $index">
+    {{message}}
+<button ng-click="$ctrl.deleteMessage($index)">X</button>
+</div>

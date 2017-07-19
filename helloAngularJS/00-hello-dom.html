@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div>
+        Prénom : <input class="prenom"  >
+    </div>
+    <p>
+        Bonjours <span class="boite"></span> !
+    </p>
+    <script>
+        //module IIFE imediately invoked function expression
+      (function () {
+        'use strict';
+            var inputElt = document.querySelector('.prenom');
+            var spanElt = document.querySelector('.boite');
+            inputElt.addEventListener('input', function hello(e){
+             var saisie = e.target.value;
+             spanElt.innerText=e.target.value;
+            });
+        }());
+    </script>
+</body>
+</html>
